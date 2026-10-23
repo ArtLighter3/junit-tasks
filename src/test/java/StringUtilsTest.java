@@ -53,4 +53,54 @@ public class StringUtilsTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void countVowels_getsHello_returns2() {
+        String input = "hello";
+        int expected = 2;
+
+        int actual = StringUtils.countVowels(input);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void countVowels_getsXyz_returns0() {
+        String input = "xyz";
+        int expected = 0;
+
+        int actual = StringUtils.countVowels(input);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void countVowels_getsEmptyString_returns0() {
+        String input = "";
+        int expected = 0;
+
+        int actual = StringUtils.countVowels(input);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void countVowels_getsNull_returns0() {
+        String input = null;
+        int expected = 0;
+
+        int actual = StringUtils.countVowels(input);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void countVowels_getsAEIOU_returns5() {
+        String input = "AEIOU";
+        int expected = 5;
+
+        int actual = StringUtils.countVowels(input);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
 }
